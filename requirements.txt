@@ -1,0 +1,38 @@
+# --- Framework Principal ---
+# O coração da sua API
+fastapi
+
+# O servidor que executa sua aplicação FastAPI
+uvicorn[standard]
+
+
+# --- Banco de Dados e ORM ---
+# O Object-Relational Mapper para falar com o banco de dados
+sqlalchemy
+
+# O "driver" para conectar o SQLAlchemy ao PostgreSQL.
+# Se for usar MySQL, troque esta linha por "mysqlclient" ou "PyMySQL"
+psycopg2-binary
+
+# Para MySQL
+mysqlclient
+PyMySQL # Alternativa ao mysqlclient, caso encontre problemas na instalação.
+
+
+# --- Validação e Configurações ---
+# Para validação de dados, usado nos Schemas e para ler o .env
+pydantic[email]
+
+# Carrega as configurações do arquivo .env para a aplicação
+pydantic-settings
+
+
+# --- Segurança e Autenticação ---
+# Para criptografar e verificar senhas
+passlib[bcrypt]
+
+# Para criar, codificar e decodificar tokens JWT (JSON Web Tokens)
+python-jose[cryptography]
+
+# Necessário para que o FastAPI entenda dados de formulário (usado na tela de login)
+python-multipart
